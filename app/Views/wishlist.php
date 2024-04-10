@@ -41,7 +41,7 @@
                 <div class="col-6">Rp.<?=number_format($r->harga)?></div>
             </div>
             <a href="<?=$r->link?>" class="card-link">Product Link</a>
-            <input class="form-check-input rd-<?=$r->id_sub1?>" type="radio" name="name-<?=$r->id_sub1?>" id="id-<?=$r->id_sub2?>">
+            <input class="form-check-input rd-<?=$r->id_sub1?>" type="radio" value="<?=$r->harga * $r->qty ?>" name="name-<?=$r->id_sub1?>" id="id-<?=$r->id_sub2?>">
         </div>
         </div>
         </div>
