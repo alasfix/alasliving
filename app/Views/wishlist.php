@@ -25,7 +25,7 @@
     $qw = $db->query("SELECT * from ta_wishlist_sub2 where id_sub1 = $r2->id_sub1");
     $data_barang = $qw->getResult();
     foreach($data_barang as $r):?>
-        <div class="col-3 mb-3">
+        <div class="col-lg-3 mb-3">
         <div class="card" >
         <img src="<?=base_url()?>public/img/<?=$r->img?>" class="card-img-top" alt="...">
         <div class="card-body">
