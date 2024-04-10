@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="<?=base_url()?>public/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="<?=getenv("PUBLIC_URL")?>bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
     <title>Wishlist - <?=$slug?></title>
   </head>
@@ -27,7 +27,7 @@
     foreach($data_barang as $r):?>
         <div class="col-lg-3 mb-3">
         <div class="card" >
-        <img src="<?=base_url()?>public/img/<?=$r->img?>" class="card-img-top" alt="...">
+        <img src="<?=getenv("PUBLIC_URL")?>img/<?=$r->img?>" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"><?=$r->nama_barang?></h5>
         </div>
@@ -53,7 +53,7 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="<?=base_url()?>public/bootstrap/js/bootstrap.bundle.min.js" ></script>
+    <script src="<?=getenv("PUBLIC_URL")?>bootstrap/js/bootstrap.bundle.min.js" ></script>
 
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 
