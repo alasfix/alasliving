@@ -54,7 +54,7 @@
                 <div class="col-6">Rp.<?=number_format($r->harga)?></div>
             </div>
             <a href="<?=$r->link?>" class="card-link">Product Link</a>
-            <input class="form-check-input rd-<?=$r->id_sub1?>" type="radio" value="<?=$r->harga * $r->qty ?>" data-nama="<?=$r->nama_barang?>" data-idtabel="td-<?=$r->id_sub1?>" onclick="sendTotable('<?=$r->harga * $r->qty?>','td-<?=$r->id_sub1?>')" name="name-<?=$r->id_sub1?>" id="id-<?=$r->id_sub2?>">
+            <input class="form-check-input rd-<?=$r->id_sub1?>" type="radio" value="<?=$r->harga * $r->qty ?>" data-nama="<?=$r->nama_barang?>" data-link="<?=$r->link?>" data-idtabel="td-<?=$r->id_sub1?>" onclick="sendTotable('<?=$r->harga * $r->qty?>','td-<?=$r->id_sub1?>')" name="name-<?=$r->id_sub1?>" id="id-<?=$r->id_sub2?>">
         </div>
         </div>
         </div>
@@ -74,6 +74,7 @@
           <th>Qty</th>
           <th>Price</th>
           <th></th>
+          <th>link</th>
         </tr>
       </thead>
       <tbody>
@@ -89,6 +90,7 @@
           <td><?=$tad->qt.' '.$tad->satuan?></td>
           <td id="td-<?=$tad->id_sub1?>"></td>
           <td id="td-<?=$tad->id_sub1?>s"></td>
+          <td id="td-<?=$tad->id_sub1?>l"></td>
         </tr>
   <?php endforeach; ?>
         <tfoot>
@@ -98,6 +100,7 @@
             <td></td>
             <td></td>
             <td id="td-total"></td>
+            <td></td>
             <td></td>
           </tr>
         </tfoot>
@@ -164,9 +167,11 @@
           var idtb = $(this).find('input[type=radio]').data('idtabel');
           var dt =  $(this).find('input[type=radio]').val();
           var nama = $(this).find('input[type=radio]').data('nama');
+          var lnk = $(this).find('input[type=radio]').data('link');
           $("#"+idtb).text(ribuan(dt))
           $("#"+idtb+"s").text(dt)
           $("#"+idtb+"n").text(nama)
+          $("#"+idtb+"l").text(lnk)
           updateSubTotal()
       });
   });
