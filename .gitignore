@@ -124,7 +124,6 @@ nb-configuration.xml
 
 /results/
 /phpunit*.xml
-
 #Local to Hosting
 /public/.htaccess
 /public/index.php
