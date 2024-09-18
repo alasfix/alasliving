@@ -3,7 +3,7 @@
 <title>Alas Living - All about stuff</title>
 <?= $this->endSection() ?>
 <?= $this->section('body') ?>
-<!-- Start Hero Section -->
+<!-- Start Hero Section. -->
 <div class="hero">
 				<div class="container">
 					<div class="row justify-content-between">
